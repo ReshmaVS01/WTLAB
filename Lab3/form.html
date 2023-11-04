@@ -1,0 +1,74 @@
+<!DOCTYPE html> <html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> <title>My Personal Details</title>
+<style>
+body {
+font-family: Arial, sans-serif; background-color: #f1f1f1; margin: 0;
+padding: 0;
+}
+form {
+max-width: 400px;
+margin: 0 auto;
+padding: 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+background: linear-gradient(to bottom right, #f6d365, #fda085); /* Gradient background */ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+h1 {
+text-align: center; color: #4caf50;
+}
+ 
+input[type="text"], input[type="email"], textarea,
+select {
+width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px;
+}
+input[type="radio"] { margin-right: 5px;
+}
+input[type="submit"] { align-content: center; padding: 10px 20px; background-color: #007bff; color: #fff;
+border: none; border-radius: 5px; cursor: pointer;
+}
+input[type="submit"]:hover { background-color: #0056b3;
+}
+textarea { resize: vertical;
+}
+
+input[type="range"] { width: 100%;
+}
+tr {
+background-color: #f9f9f9;
+}
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+border-color: #4caf50; }
+input[type="radio"]:checked + label { color: #007bff;
+}
+input[type="range"] {
+background: linear-gradient(to right, #007bff, #4caf50);
+} </style>
+</head> <body>
+<form id="contactForm">
+<h1>PERSONAL DETAILS</h1>
+<label for="name">Name:</label>
+<input type="text" id="name" placeholder="Enter your name" required><br>
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" required><br><br>
+
+<label>Gender:</label>
+<input type="radio" name="gender" id="male" value="Male"> <label for="male">Male</label>
+<input type="radio" name="gender" id="female" value="Female"> <label for="female">Female</label>
+<input type="radio" name="gender" id="others" value="Others"> <label for="others">Others</label><br><br>
+<label for="email">Email ID:</label>
+<input type="email" id="email" placeholder="Enter your email ID" required><br>
+<label for="phone">Phone No:</label>
+<input type="text" id="phone" placeholder="Enter your phone no" required><br>
+<label for="qualification">Qualification:</label> <select id="qualification">
+<option>10th</option> <option>12th</option> <option>Under Graduate</option> <option>Post Graduate</option>
+</select><br>
+<label for="address">Residential Address:</label>
+<textarea id="address" placeholder="Enter your address"></textarea><br>
+<label for="photo">Photo:</label> <input type="file" id="photo"><br><br>
+<label for="rating">Rate this form on a scale of 10:</label><br> <input type="range" id="rating" min="0" max="10"><br><br>
+<input type="submit" value="Submit"> </form>
+
+<script src="script.js"></script> </body>
+</html>
